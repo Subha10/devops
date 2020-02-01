@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps{
-                git 'https://github.com/Subha10/devops.git'
+               echo "This is from Git"
             }
         }
     }
