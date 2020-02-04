@@ -9,11 +9,11 @@ pipeline{
             steps{
                 git 'https://github.com/Subha10/devops.git'
             }
-        }
+            }
+            }
         stage("Maven build"){
         steps{
         sh "mvn clean package"
-        }
         }
     }
 }
