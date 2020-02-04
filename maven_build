@@ -1,0 +1,19 @@
+pipeline{
+    agent any
+    
+   environment{
+     PATH="/opt/maven2/bin:$PATH"
+   }
+    stages{
+        stage("Git Checkout"){
+            steps{
+                git 'https://github.com/Subha10/devops.git'
+            }
+        }
+        stage("Maven build"){
+        steps{
+        sh "mvn clean package"
+        }
+        }
+    }
+}
